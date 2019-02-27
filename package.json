@@ -10,7 +10,8 @@
     "dev": "yarn build && yarn test -u",
     "generate": "babel-plugin-quick-quote",
     "release": "np --no-cleanup",
-    "install": "babel-plugin-quick-quote"
+    "prepare": "yarn build",
+    "install": "node lib/index.js"
   },
   "bin": {
     "babel-plugin-quick-quote": "./bin/index.js"
