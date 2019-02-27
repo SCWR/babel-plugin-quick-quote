@@ -50,6 +50,7 @@ let output = [
 *   "generate": "babel-plugin-quick-quote",
 *   ...
 * }
+* if quickOuoteConfig is empty object, please install dependencies [echarts] before using the command [babel-plugin-quick-quote]
 */
 exports.quickQuoteConfig = {`]
 
