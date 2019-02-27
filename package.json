@@ -14,7 +14,7 @@
     "install": "node lib/index.js"
   },
   "bin": {
-    "babel-plugin-quick-quote": "./bin/index.js"
+    "babel-plugin-quick-quote": "./lib/index.js"
   },
   "license": "MIT",
   "keywords": [
