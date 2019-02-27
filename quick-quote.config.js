@@ -1,12 +1,11 @@
 /**
-* babel-plugin-quick-quote
+* babel-plugin-quick-quote https://github.com/SCWR/babel-plugin-quick-quote#readme
 * package.json config
 * "scripts": {
 *   ...
 *   "generate": "babel-plugin-quick-quote",
 *   ...
 * }
-* https://github.com/SCWR/babel-plugin-quick-quote#readme
 */
 exports.quickQuoteConfig = {
   // echarts version: 4.1.0

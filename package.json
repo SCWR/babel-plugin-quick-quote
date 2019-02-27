@@ -11,10 +11,10 @@
     "generate": "babel-plugin-quick-quote",
     "release": "np --no-cleanup",
     "prepare": "yarn build",
-    "install": "node lib/index.js"
+    "install": "node bin/index.js"
   },
   "bin": {
-    "babel-plugin-quick-quote": "./lib/index.js"
+    "babel-plugin-quick-quote": "bin/index.js"
   },
   "license": "MIT",
   "keywords": [
