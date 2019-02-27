@@ -1,0 +1,51 @@
+{
+  "name": "babel-plugin-quick-quote",
+  "version": "1.0.0",
+  "description": "Easy to load and import echarts module on demand",
+  "author": "SCWR(dl_run@qq.com)",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src --out-dir lib --presets=@babel/preset-env",
+    "dev": "yarn build && yarn test -u",
+    "generate": "babel-plugin-quick-quote",
+    "release": "np --no-cleanup",
+    "install": "babel-plugin-quick-quote"
+  },
+  "bin": {
+    "babel-plugin-quick-quote": "./bin/index.js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "echarts",
+    "module",
+    "dynamic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCWR/babel-plugin-quick-quote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SCWR/babel-plugin-quick-quote/issues"
+  },
+  "homepage": "https://github.com/SCWR/babel-plugin-quick-quote#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "echarts": "^4.1.0",
+    "eslint": "^5.14.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.1.0"
+  },
+  "peerDependencies": {
+    "echarts": ">=3 <=4"
+  }
+}

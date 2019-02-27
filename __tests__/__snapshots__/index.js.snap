@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`
+    $_quickQuote([
+      'line',
+      'bar'
+    ])
+   should works to 1`] = `
+"import \\"echarts/lib/echarts\\";
+import \\"echarts/lib/chart/line\\";
+import \\"echarts/lib/chart/bar\\";"
+`;
+
+exports[`
+    $_quickQuoteAsync([
+      'line',
+      'bar'
+    ])
+   should works to 1`] = `
+"let $_QuickQuote_echartsInstance = null;
+
+function getEchartsInstance() {
+  if (!$_QuickQuote_echartsInstance) {
+    $_QuickQuote_echartsInstance = import(
+    /* webpackChunkName: \\"echarts\\" */
+    'echarts/lib/echarts').then(echarts => {
+      return Promise.all([echarts, import(
+      /* webpackChunkName: \\"echarts\\" */
+      'echarts/lib/chart/line'), import(
+      /* webpackChunkName: \\"echarts\\" */
+      'echarts/lib/chart/bar')]).then(([echarts]) => echarts);
+    });
+  }
+
+  return $_QuickQuote_echartsInstance;
+}"
+`;
+
+exports[`
+    const echarts = $_quickQuote([
+      'line',
+      'bar'
+    ]), test = 'test';
+   should works to 1`] = `
+"import echarts from \\"echarts/lib/echarts\\";
+import \\"echarts/lib/chart/line\\";
+import \\"echarts/lib/chart/bar\\";
+const test = 'test';"
+`;
+
+exports[`
+    const echarts = $_quickQuote([
+      'path/demo/path',
+      'line',
+      'bar'
+    ])
+   should works to 1`] = `
+"import echarts from \\"echarts/lib/echarts\\";
+import \\"path/demo/path\\";
+import \\"echarts/lib/chart/line\\";
+import \\"echarts/lib/chart/bar\\";"
+`;
+
+exports[`
+    const initEcharts = $_quickQuoteAsync([
+      'line',
+      'bar'
+    ])
+   should works to 1`] = `
+"let $_QuickQuote_echartsInstance = null;
+
+function initEcharts() {
+  if (!$_QuickQuote_echartsInstance) {
+    $_QuickQuote_echartsInstance = import(
+    /* webpackChunkName: \\"echarts\\" */
+    'echarts/lib/echarts').then(echarts => {
+      return Promise.all([echarts, import(
+      /* webpackChunkName: \\"echarts\\" */
+      'echarts/lib/chart/line'), import(
+      /* webpackChunkName: \\"echarts\\" */
+      'echarts/lib/chart/bar')]).then(([echarts]) => echarts);
+    });
+  }
+
+  return $_QuickQuote_echartsInstance;
+}"
+`;
