@@ -6,40 +6,7 @@ babel plugin quickly introduce the echarts module on demand
 [ci]:      https://travis-ci.org/SCWR/babel-plugin-quick-quote
 
 ```js
-import {$_quickQuote, $_quickQuoteAsync} from 'babel-plugin-quick-quote/lib/tool'
-$_quickQuote([
-  'line',
-  'bar'
-])
-
-// transform:
-// import "echarts/lib/echarts";
-// import "echarts/lib/chart/line";
-// import "echarts/lib/chart/bar";
-```
-
-```js
-//If there is no variable name, it will default to
-// function getEchartsInstance()
-$_quickQuoteAsync([
-  'line',
-  'bar'
-])
-// transform:
-// let $_QuickQuote_echartsInstance = null;
-// function getEchartsInstance() {
-//   if (!$_QuickQuote_echartsInstance) {
-//     $_QuickQuote_echartsInstance = import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/echarts').then(echarts => {
-//       return Promise.all([echarts,
-//       import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/chart/line'),
-//       import(/* webpackChunkName: \\"echarts\\" */'echarts/lib/chart/bar')]).then(([echarts]) => echarts);
-//     });
-//   }
-//   return $_QuickQuote_echartsInstance;
-// }
-```
-
-```js
+import {$_quickQuote} from 'babel-plugin-quick-quote/lib/tool'
 const echarts = $_quickQuote([
   'line',
   'bar'
@@ -53,6 +20,7 @@ const echarts = $_quickQuote([
 
 ```js
 // If there is no corresponding configuration in the configuration file quick-quote.config.js, output will be as it is.
+import {$_quickQuote} from 'babel-plugin-quick-quote/lib/tool'
 const echarts = $_quickQuote([
   'path/demo/path',
   'line',
@@ -67,6 +35,20 @@ const echarts = $_quickQuote([
 ```
 
 ```js
+import {$_quickQuote} from 'babel-plugin-quick-quote/lib/tool'
+$_quickQuote([
+  'line',
+  'bar'
+])
+
+// transform:
+// import "echarts/lib/echarts";
+// import "echarts/lib/chart/line";
+// import "echarts/lib/chart/bar";
+```
+
+```js
+import {$_quickQuoteAsync} from 'babel-plugin-quick-quote/lib/tool'
 const initEcharts = $_quickQuoteAsync([
   'line',
   'bar'
@@ -84,6 +66,27 @@ const initEcharts = $_quickQuoteAsync([
 //   return $_QuickQuote_echartsInstance;
 // }
 ```
+
+```js
+//If there is no variable name, it will default to
+// function getEchartsInstance()
+import {$_quickQuoteAsync} from 'babel-plugin-quick-quote/lib/tool'
+$_quickQuoteAsync([
+  'line',
+  'bar'
+])
+// transform:
+// let $_QuickQuote_echartsInstance = null;
+// function getEchartsInstance() {
+//   if (!$_QuickQuote_echartsInstance) {
+//     $_QuickQuote_echartsInstance = import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/echarts').then(echarts => {
+//       return Promise.all([echarts,
+//       import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/chart/line'),
+//       import(/* webpackChunkName: \\"echarts\\" */'echarts/lib/chart/bar')]).then(([echarts]) => echarts);
+//     });
+//   }
+//   return $_QuickQuote_echartsInstance;
+// }
 
 ## Usage
 
