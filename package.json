@@ -5,13 +5,13 @@
   "author": "SCWR(dl_run@qq.com)",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
+    "start": "yarn build && yarn test -u",
     "build": "babel src --out-dir lib --presets=@babel/preset-env",
-    "dev": "yarn build && yarn test -u",
-    "generate": "babel-plugin-quick-quote",
+    "test": "jest",
+    "generate": "node bin/index.js",
     "release": "np --no-cleanup",
     "prepare": "yarn build",
-    "install": "node bin/index.js"
+    "install": "yarn run generate"
   },
   "bin": {
     "babel-plugin-quick-quote": "bin/index.js"
