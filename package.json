@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-quick-quote",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easy to load and import echarts module on demand",
   "author": "SCWR(dl_run@qq.com)",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
     "generate": "node bin/index.js",
     "release": "np --no-cleanup",
     "prepare": "yarn build && yarn run generate",
-    "install": "yarn run generate"
+    "install": "yarn run generate",
+    "postinstall": "yarn run generate"
   },
   "bin": {
     "babel-plugin-quick-quote": "bin/index.js"
