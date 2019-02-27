@@ -12,6 +12,16 @@ function getIndents (num = 0, indent = '  ') {
   return new Array(num).fill(indent).join('')
 }
 
+if (!Object.entries) {
+  Object.entries = function (obj) {
+    let ownProps = Object.keys(obj)
+    let i = ownProps.length
+    let resArray = new Array(i) // preallocate the Array
+    while (i--) {resArray[i] = [ownProps[i], obj[ownProps[i]]]}
+    return resArray
+  }
+}
+
 function handleConfig (config, level = 0) {
   const result = []
   for (let [key, {remark, content}] of Object.entries(config)) {
