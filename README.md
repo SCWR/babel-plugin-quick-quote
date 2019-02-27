@@ -19,7 +19,8 @@ const echarts = $_quickQuote([
 ```
 
 ```js
-// If there is no corresponding configuration in the configuration file quick-quote.config.js, output will be as it is.
+// If there is no corresponding configuration in the configuration file quick-quote.config.js,
+// output will be as it is.
 import {$_quickQuote} from 'babel-plugin-quick-quote/lib/tool'
 const echarts = $_quickQuote([
   'path/demo/path',
@@ -57,10 +58,13 @@ const initEcharts = $_quickQuoteAsync([
 // let $_QuickQuote_echartsInstance = null;
 // function initEcharts() {
 //   if (!$_QuickQuote_echartsInstance) {
-//     $_QuickQuote_echartsInstance = import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/echarts').then(echarts => {
-//       return Promise.all([echarts,
-//       import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/chart/line'),
-//       import(/* webpackChunkName: \\"echarts\\" */'echarts/lib/chart/bar')]).then(([echarts]) => echarts);
+//     $_QuickQuote_echartsInstance =
+//       import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/echarts').
+//         then(echarts => {
+//         return Promise.all([echarts,
+//         import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/chart/line'),
+//         import(/* webpackChunkName: \\"echarts\\" */'echarts/lib/chart/bar')]).
+//         then(([echarts]) => echarts);
 //     });
 //   }
 //   return $_QuickQuote_echartsInstance;
@@ -79,10 +83,13 @@ $_quickQuoteAsync([
 // let $_QuickQuote_echartsInstance = null;
 // function getEchartsInstance() {
 //   if (!$_QuickQuote_echartsInstance) {
-//     $_QuickQuote_echartsInstance = import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/echarts').then(echarts => {
-//       return Promise.all([echarts,
-//       import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/chart/line'),
-//       import(/* webpackChunkName: \\"echarts\\" */'echarts/lib/chart/bar')]).then(([echarts]) => echarts);
+//     $_QuickQuote_echartsInstance =
+//       import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/echarts').
+//         then(echarts => {
+//         return Promise.all([echarts,
+//         import( /* webpackChunkName: \\"echarts\\" */ 'echarts/lib/chart/line'),
+//         import(/* webpackChunkName: \\"echarts\\" */'echarts/lib/chart/bar')]).
+//         then(([echarts]) => echarts);
 //     });
 //   }
 //   return $_QuickQuote_echartsInstance;
