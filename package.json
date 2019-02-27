@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-quick-quote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy to load and import echarts module on demand",
   "author": "SCWR(dl_run@qq.com)",
   "main": "lib/index.js",
@@ -10,7 +10,7 @@
     "test": "jest",
     "generate": "node bin/index.js",
     "release": "np --no-cleanup",
-    "prepare": "yarn build",
+    "prepare": "yarn build && yarn run generate",
     "install": "yarn run generate"
   },
   "bin": {
@@ -47,5 +47,10 @@
   },
   "peerDependencies": {
     "echarts": ">=3 <=4"
-  }
+  },
+  "files": [
+    "quick-quote.config.js",
+    "bin",
+    "lib"
+  ]
 }
