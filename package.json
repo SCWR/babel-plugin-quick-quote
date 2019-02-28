@@ -10,7 +10,7 @@
     "test": "jest",
     "generate": "node bin/index.js",
     "release": "np --no-cleanup",
-    "prepare": "yarn build && yarn run generate",
+    "prepublishOnly": "yarn build && yarn run generate",
     "postinstall": "node bin/index.js --init"
   },
   "bin": {
