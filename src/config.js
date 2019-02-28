@@ -15,6 +15,7 @@ export function loadConfig (key) {
         console.log(`It is recommended to use the babel-plugin-quick-quote command,
         generate the corresponding configuration file(quick-quote.config.js) for the echarts version currently used by the project.
         https://github.com/SCWR/babel-plugin-quick-quote#readme`)
+      } else {
         userConfig = config.quickQuoteConfig
       }
     } catch (e) {
