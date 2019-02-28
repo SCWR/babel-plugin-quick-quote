@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-
+const args = process.argv.splice(2)
 const echartsGenerate = require('../lib/generate/echartsGenerate.js')
 
-const ROOT_PATH = process.cwd()
+// eliminate the path error of the initial file when the package is installed
+const ROOT_PATH = process.cwd().replace(path.join('node_modules', 'babel-plugin-quick-quote'), '')
 const MODULES_PATH = path.resolve(ROOT_PATH, 'node_modules')
 const OUTPUT_PATH = path.resolve(ROOT_PATH, 'quick-quote.config.js')
 
@@ -41,6 +42,11 @@ function handleConfig (config, level = 0) {
   return result
 }
 
+if (args.includes('--init') && fs.existsSync(OUTPUT_PATH)) {
+  console.log('quick-quote.config.js already exists and does not need to be initialized')
+  return
+}
+
 let output = [
   `/**
 * babel-plugin-quick-quote https://github.com/SCWR/babel-plugin-quick-quote#readme
@@ -55,7 +61,7 @@ let output = [
 exports.quickQuoteConfig = {`]
 
 if (!fs.existsSync(MODULES_PATH)) {
-  console.log('cannot find node_modules folder, please run this command in the project root path')
+  console.log(`path is ${MODULES_PATH}, cannot find node_modules folder,  please run this command in the project root path`)
   return
 }
 
