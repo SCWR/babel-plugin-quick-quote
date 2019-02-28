@@ -94,6 +94,7 @@ $_quickQuoteAsync([
 //   }
 //   return $_QuickQuote_echartsInstance;
 // }
+```
 
 ## Usage
 
