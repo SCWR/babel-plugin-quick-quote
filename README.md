@@ -2,8 +2,8 @@
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
-<!-- [![Node.js Version][node-version-image]][node-version-url] -->
 [![Build Status][travis-ci-image]][travis-ci-url]
+<!-- [![Node.js Version][node-version-image]][node-version-url] -->
 
 babel plugin quickly introduce the echarts module on demand
 
