@@ -1,9 +1,20 @@
-# Babel Plugin Quick Quote [![Build Status][ci-img]][ci]
+# Babel Plugin Quick Quote
+
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+<!-- [![Node.js Version][node-version-image]][node-version-url] -->
+[![Build Status][travis-ci-image]][travis-ci-url]
 
 babel plugin quickly introduce the echarts module on demand
 
-[ci-img]:  https://travis-ci.org/SCWR/babel-plugin-quick-quote.svg
-[ci]:      https://travis-ci.org/SCWR/babel-plugin-quick-quote
+[npm-image]: https://img.shields.io/npm/v/babel-plugin-quick-quote.svg
+[npm-url]: https://npmjs.org/package/babel-plugin-quick-quote
+<!-- [node-version-image]: https://img.shields.io/node/v/babel-plugin-quick-quote.svg
+[node-version-url]: http://nodejs.org/download/ -->
+[downloads-image]: https://img.shields.io/npm/dm/babel-plugin-quick-quote.svg
+[downloads-url]: https://npmjs.org/package/babel-plugin-quick-quote
+[travis-ci-image]:  https://travis-ci.org/SCWR/babel-plugin-quick-quote.svg
+[travis-ci-url]:    https://travis-ci.org/SCWR/babel-plugin-quick-quote
 
 ```js
 import {$_quickQuote} from 'babel-plugin-quick-quote/lib/tool'
