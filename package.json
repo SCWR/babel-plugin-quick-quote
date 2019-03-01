@@ -48,6 +48,9 @@
   "peerDependencies": {
     "echarts": ">=3 <=4"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "files": [
     "quick-quote.config.js",
     "bin",
