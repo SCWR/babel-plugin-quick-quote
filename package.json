@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-quick-quote",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "easy to load and import echarts module on demand",
   "author": "SCWR(dl_run@qq.com)",
   "main": "lib/index.js",
