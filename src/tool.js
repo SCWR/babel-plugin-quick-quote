@@ -8,5 +8,5 @@ const error = new Error(`
 export const QUICK_QUOTE_KEY = '$_quickQuote'
 export const QUICK_QUOTE_ASYNC_KEY = '$_quickQuoteAsync'
 
-export const $_quickQuote = (arr, key) => error
-export const $_quickQuoteAsync = (arr, key) => () => Promise.reject(error)
+export const $_quickQuote = (arr, key) => {throw error}
+export const $_quickQuoteAsync = (arr, key) => Promise.reject(error)
